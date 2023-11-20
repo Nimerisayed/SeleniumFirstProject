@@ -17,9 +17,9 @@ public class SignUpProsses {
 	Random rand = new Random();
 
 	String URL = "https://magento.softwaretestingboard.com/customer/account/create/";
-	String FirstName = "abedalraheem";
-	String lastName = "alsaqqa";
-	String Email = "asaqa";
+	String FirstName = "nimir";
+	String lastName = "isayed";
+	String Email = "nimir";
 	String Domain = "@gmail.com";
 	String Password = "ASDasd123!@#";
 
@@ -31,7 +31,6 @@ public class SignUpProsses {
 
 	@Test()
 	public void myTest() {
-
 		int myNewIDForTheEmail = rand.nextInt(10000);
 		// define all the webelement that will be used
 		WebElement FirstNameInputField = driver.findElement(By.id("firstname"));
@@ -46,8 +45,11 @@ public class SignUpProsses {
 		EmailInputField.sendKeys(Email + myNewIDForTheEmail + Domain);
 		PasswordInputField.sendKeys(Password);
 		PasswordConfirmationField.sendKeys(Password);
-
+		
+		
+		
 	}
+
 
 	@AfterTest
 	public void myAfter(){
